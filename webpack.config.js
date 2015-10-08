@@ -2,7 +2,7 @@ module.exports = {
 
   // set the context (optional)
   context: __dirname + '/src',
-  entry: 'app.js',
+  entry: 'bootstrap.js',
 
   // enable loading modules relatively (without the ../../ prefix)
   resolve: {
