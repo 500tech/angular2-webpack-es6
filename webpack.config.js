@@ -27,7 +27,7 @@ module.exports = {
       { test: /\.woff(2)?$/, loader: "url?limit=8192&minetype=application/font-woff"},
 
       // load images (inline base64 URLs for <=8k images)
-      {test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'}
+      { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'}
     ]
   },
 
@@ -35,7 +35,7 @@ module.exports = {
   devServer: {
     contentBase: "./src",
     noInfo: false,
-    hot: true
+    hot: false
   },
 
   // support source maps
