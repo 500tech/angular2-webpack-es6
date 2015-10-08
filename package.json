@@ -20,7 +20,8 @@
   "homepage": "https://github.com/500tech/angular2-webpack-es6",
   "dependencies": {
     "angular2": "2.0.0-alpha.39",
-    "reflect-metadata": "0.1.2"
+    "reflect-metadata": "0.1.2",
+    "zone.js": "0.5.8"
   },
   "keywords": [
     "angularjs",
