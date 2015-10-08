@@ -1,0 +1,44 @@
+{
+  "name": "angular2-webpack-es6",
+  "version": "0.1.0",
+  "description": "Angular2 Webpack & ES6 Playground",
+  "main": "",
+  "scripts": {
+    "prestart": "npm install",
+    "start": "webpack-dev-server",
+    "build": "mkdir -p dist & cp src/index.html dist/ & webpack -p ./dist/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/500tech/angular2-webpack-es6.git"
+  },
+  "author": "Boris Dinkevich <boris@500tech.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/500tech/angular2-webpack-es6/issues"
+  },
+  "homepage": "https://github.com/500tech/angular2-webpack-es6",
+  "dependencies": {
+    "angular2": "2.0.0-alpha.39",
+    "reflect-metadata": "0.1.2"
+  },
+  "keywords": [
+    "angularjs",
+    "webpack",
+    "es6",
+    "javascript",
+    "bootstrap",
+    "kickstart"
+  ],
+  "devDependencies": {
+    "babel-core": "5.6.4",
+    "babel-loader": "5.1.4",
+    "css-loader": "^0.19.0",
+    "file-loader": "^0.8.1",
+    "json-loader": "^0.5.1",
+    "raw-loader": "^0.5.1",
+    "style-loader": "^0.12.2",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.0"
+  }
+}
