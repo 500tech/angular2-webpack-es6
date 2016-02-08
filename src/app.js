@@ -1,18 +1,14 @@
-import 'zone.js';
-import 'reflect-metadata';
-import { bootstrap, Component, View } from 'angular2/angular2';
+import { Component, View } from 'angular2/core';
 
-@Component({ 
+@Component({
   selector: 'my-app',
   template: `
-<h1>Welcome to your Angular2 + Webpack + ES6 Playground</h1>
-<h2>Have {{ what }}</h2>
+    <h1>Welcome to your Angular2 + Webpack + ES6 Playground</h1>
+    <h2>Have {{ what }}</h2>
   `
 })
-class App {
+export default class App {
   constructor() {
     this.what = "a good time!";
   }
 }
-
-bootstrap(App);

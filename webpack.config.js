@@ -1,12 +1,11 @@
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
 
-  // set the context (optional)
-  context: __dirname + '/src',
-  entry: 'app.js',
-
-  // enable loading modules relatively (without the ../../ prefix)
-  resolve: {
-    root: [__dirname + "/src"]
+  entry: './src/bootstrap.js',
+  output: {
+    path: __dirname + '/dist',
+    filename: "bundle.js"
   },
 
   module: {
@@ -30,6 +29,13 @@ module.exports = {
       { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'}
     ]
   },
+
+  // inject js bundle to index.html
+  plugins: [new HtmlWebpackPlugin({
+    template: './src/index.html',
+    inject: 'body',
+    minify: false
+  })],
 
   // webpack dev server configuration
   devServer: {
