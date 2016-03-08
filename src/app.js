@@ -1,4 +1,4 @@
-import { Component, View } from 'angular2/core';
+import { Component } from 'angular2/core';
 
 @Component({
   selector: 'my-app',
@@ -11,4 +11,4 @@ export default class App {
   constructor() {
     this.what = "a good time!";
   }
-}
+};
