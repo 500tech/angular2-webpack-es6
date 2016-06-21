@@ -1,6 +1,8 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var CleanPlugin       = require('clean-webpack-plugin');
+var appEnv = process.env.NODE_ENV || 'development';
 
-module.exports = {
+var config = {
 
   entry: './src/bootstrap.js',
   output: {
@@ -42,8 +44,18 @@ module.exports = {
     contentBase: "./src",
     noInfo: false,
     hot: false
-  },
-
-  // support source maps
-  devtool: "#inline-source-map"
+  }
 };
+
+if (appEnv === 'development') {
+  config.devtool = '#inline-source-map';
+}
+
+if (appEnv === 'production') {
+  config.plugins.push(
+    // Remove build related folders
+    new CleanPlugin(['dist'])
+  );
+}
+
+module.exports = config;
